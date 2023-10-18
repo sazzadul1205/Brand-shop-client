@@ -1,0 +1,74 @@
+{
+  "News": [
+    {
+      "id": 1,
+      "title": "Latest Smartphone Technology: An Overview",
+      "description": "Explore the latest advancements in smartphone technology, from foldable screens to advanced camera systems. Stay updated on the newest features and innovations reshaping the mobile industry.",
+      "date": "October 2, 2023",
+      "image": "https://i.ibb.co/Bs5mjP8/nc1.png"
+    },
+    {
+      "id": 2,
+      "title": "The Future of Laptops: Performance and Portability Combined",
+      "description": "Discover the cutting-edge developments in laptop design, balancing high performance with portability. Learn about the latest processors, display technologies, and connectivity options redefining the laptop experience.",
+      "date": "October 5, 2023",
+      "image": "https://i.ibb.co/XsNM6mn/nc2.png"
+    },
+    {
+      "id": 3,
+      "title": "Next-Generation Tablets: Blending Productivity and Entertainment",
+      "description": "Dive into the world of versatile tablets, bridging the gap between work and play. Explore the latest models offering powerful performance, stunning displays, and seamless integration with productivity tools and entertainment platforms.",
+      "date": "October 8, 2023",
+      "image": "https://i.ibb.co/5xwQWPJ/nc-3.png"
+    },
+    {
+      "id": 4,
+      "title": "Revolutionizing Wearables: The Smartwatch Phenomenon",
+      "description": "Experience the evolution of smartwatches, blending style with advanced health and fitness tracking features. Stay informed about the newest releases and innovations in the wearable technology market.",
+      "date": "October 11, 2023",
+      "image": "https://i.ibb.co/c3b98mQ/nc-4.png"
+    },
+    {
+      "id": 5,
+      "title": "Immersive Gaming: The Next Generation of Consoles",
+      "description": "Immerse yourself in the future of gaming with the latest console advancements, delivering stunning graphics and seamless gameplay. Learn about the most anticipated releases and upcoming features shaping the gaming industry.",
+      "date": "October 14, 2023",
+      "image": "https://i.ibb.co/bPV1mgM/nc-5.png"
+    },
+    {
+      "id": 6,
+      "title": "Capturing Moments: The Latest in Camera Technology",
+      "description": "Explore the world of photography with the latest camera innovations, enhancing image quality and creative possibilities. Stay updated on the newest camera releases and advancements in the field of digital imaging.",
+      "date": "October 17, 2023",
+      "image": "https://i.ibb.co/8Ympy1y/nc-6.png"
+    },
+    {
+      "id": 7,
+      "title": "Immersive Audio Experience: Next-Generation Headphones",
+      "description": "Dive into the realm of premium audio with the latest advancements in headphone technology, delivering immersive sound and superior comfort. Stay tuned for the newest releases and trends in the audio industry.",
+      "date": "October 20, 2023",
+      "image": "https://i.ibb.co/JtB45C3/nc-7.png"
+    },
+    {
+      "id": 8,
+      "title": "Power and Performance: The Modern Desktop Computer",
+      "description": "Explore the cutting-edge capabilities of desktop computers, offering unparalleled processing power and expandability. Discover the latest models and configurations catering to diverse user needs and preferences.",
+      "date": "October 23, 2023",
+      "image": "https://i.ibb.co/Dgmb9qJ/nc-8.png"
+    },
+    {
+      "id": 9,
+      "title": "Elevating Audio Entertainment: Wireless Speaker Systems",
+      "description": "Delve into the world of wireless speakers, delivering premium sound quality and seamless connectivity. Stay informed about the latest speaker releases and advancements in wireless audio technology.",
+      "date": "October 26, 2023",
+      "image": "https://i.ibb.co/vzYJN0n/nc-9.png"
+    },
+    {
+      "id": 10,
+      "title": "Immersive Virtual Reality: The Future of VR Headsets",
+      "description": "Step into the realm of immersive virtual reality with the latest advancements in VR headset technology, offering unparalleled realism and interactivity. Explore the newest models and developments shaping the world of VR entertainment.",
+      "date": "October 29, 2023",
+      "image": "https://i.ibb.co/WVvNwt6/nc-10.png"
+    }
+  ]
+}

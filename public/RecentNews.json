@@ -1,0 +1,76 @@
+{
+    "RecentNews": [
+        {
+            "id": 6,
+            "title": "Cybersecurity in the Digital Age",
+            "author": "Amanda Wilson",
+            "date": "October 20, 2023",
+            "description": "Explore the importance of cybersecurity and how to protect your digital assets in the modern age.",
+            "image": "https://i.ibb.co/MD4tch3/rnews-1.png"
+        },
+        {
+            "id": 7,
+            "title": "Innovations in AI and Machine Learning",
+            "author": "Daniel Brown",
+            "date": "October 18, 2023",
+            "description": "Discover the latest breakthroughs in AI and machine learning shaping various industries and applications.",
+            "image": "https://i.ibb.co/FmMZPr3/news-2.png"
+        },
+        {
+            "id": 8,
+            "title": "The Future of Robotics and Automation",
+            "author": "Sophia Johnson",
+            "date": "October 16, 2023",
+            "description": "Learn about the advancements in robotics and automation, transforming various sectors and businesses.",
+            "image": "https://i.ibb.co/sCsrgRB/rnews-3.png"
+        },
+        {
+            "id": 9,
+            "title": "Impact of 5G Technology on Communication",
+            "author": "Mark Davis",
+            "date": "October 14, 2023",
+            "description": "Explore how 5G technology is revolutionizing communication networks and enabling new possibilities.",
+            "image": "https://i.ibb.co/dtSK7jB/rnews-4.png"
+        },
+        {
+            "id": 10,
+            "title": "Advancements in Renewable Energy Solutions",
+            "author": "Emily White",
+            "date": "October 12, 2023",
+            "description": "Discover the latest developments in renewable energy technologies and their impact on sustainability.",
+            "image": "https://i.ibb.co/nspyTML/rnews-5.png"
+        },
+        {
+            "id": 11,
+            "title": "The Evolution of Augmented Reality in Retail",
+            "author": "Matthew Taylor",
+            "date": "October 10, 2023",
+            "description": "Explore how augmented reality is reshaping the retail experience and influencing consumer behavior.",
+            "image": "https://i.ibb.co/61KtKV2/rnews-6.png"
+        },
+        {
+            "id": 12,
+            "title": "Big Data Analytics: Uncovering Business Insights",
+            "author": "Olivia Martin",
+            "date": "October 8, 2023",
+            "description": "Learn about the role of big data analytics in driving business decisions and strategies for growth.",
+            "image": "https://i.ibb.co/y5km41B/rnews-7.png"
+        },
+        {
+            "id": 13,
+            "title": "The Rise of Cryptocurrencies and Blockchain",
+            "author": "William Anderson",
+            "date": "October 6, 2023",
+            "description": "Delve into the world of cryptocurrencies and blockchain technology, and its potential impact on the financial landscape.",
+            "image": "https://i.ibb.co/0jfnw7Z/rnews-8.png"
+        },
+        {
+            "id": 14,
+            "title": "Sustainability in Tech: Reducing Environmental Footprint",
+            "author": "Ella Thompson",
+            "date": "October 4, 2023",
+            "description": "Discover the initiatives and innovations in the tech industry focused on promoting environmental sustainability.",
+            "image": "https://i.ibb.co/2j5j5C4/rnews-9.png"
+        }
+    ]
+}

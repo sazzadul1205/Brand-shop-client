@@ -1,4 +1,4 @@
-import Swal from "sweetalert2";
+// import Swal from "sweetalert2";
 
 const AddProducts = () => {
     const handleAddCoffee = e => {
@@ -14,8 +14,12 @@ const AddProducts = () => {
         const supply = form.supply.value
         const description = form.description.value
         const photo = form.photo.value
+        const ram = form.ram.value
+        const rom = form.rom.value
+        const battery = form.battery.value
+        const display = form.display.value
 
-        const newCoffee = { name, brand_name, type, price, rating, supply, description, photo };
+        const newCoffee = { name, brand_name, type, price, rating, supply, description, ram, rom, battery, display, photo };
         console.log(newCoffee);
 
         // send data to Server
@@ -41,8 +45,8 @@ const AddProducts = () => {
     }
 
     return (
-        <div className="bg-green-500 p-24">
-            <h2 className="text-center mx-auto text-5xl font-semibold">Add New New Products</h2>
+        <div className="bg-green-500 p-10 md:p-24">
+            <h2 className="text-center  md:mx-auto text-3xl md:text-5xl font-semibold">Add New Products</h2>
             <form onSubmit={handleAddCoffee}>
                 <div className="mt-14 justify-center mx-auto text-white text-xl">
                     {/* Form Row name and brand name */}
@@ -102,6 +106,44 @@ const AddProducts = () => {
                             </label>
                         </div>
                     </div>
+                    {/* Form Row RAM and ROM  */}
+                    <div className="md:flex">
+                        <div className="form-control md:w-1/2">
+                            <label className="label">
+                                <span >RAM</span>
+                            </label>
+                            <label className="input-group">
+                                <input type="text" name="ram" className="input input-bordered md:w-full mr-5" />
+                            </label>
+                        </div>
+                        <div className="form-control md:w-1/2">
+                            <label className="label">
+                                <span >ROM</span>
+                            </label>
+                            <label className="input-group">
+                                <input type="text" name="rome" className="input input-bordered md:w-full" />
+                            </label>
+                        </div>
+                    </div>
+                    {/* Form Row Battery and Display  */}
+                    <div className="md:flex">
+                        <div className="form-control md:w-1/2">
+                            <label className="label">
+                                <span >Battery</span>
+                            </label>
+                            <label className="input-group">
+                                <input type="text" name="battery" className="input input-bordered md:w-full mr-5" />
+                            </label>
+                        </div>
+                        <div className="form-control md:w-1/2">
+                            <label className="label">
+                                <span >Display</span>
+                            </label>
+                            <label className="input-group">
+                                <input type="text" name="display" className="input input-bordered md:w-full" />
+                            </label>
+                        </div>
+                    </div>
                     {/* Form Row description */}
                     <div >
                         <div className="form-control w-full">
@@ -112,7 +154,7 @@ const AddProducts = () => {
                                 <textarea
                                     name="description"
                                     placeholder="Short description"
-                                    className="input input-bordered md:w-full h-24 p-2 resize-y"
+                                    className="input input-bordered w-full h-24 p-2 resize-y"
                                 />
                             </label>
                         </div>

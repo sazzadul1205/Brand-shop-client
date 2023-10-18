@@ -4,6 +4,8 @@ import Home from "../pages/Home/Home";
 import Login from "../Auth/Login/Login"
 import SignUp from "../Auth/SignUp/SignUp";
 import AddProducts from "../pages/AddProducts/AddProducts";
+import News from "../pages/News/News";
+
 
 
 
@@ -27,6 +29,10 @@ const routes = createBrowserRouter([
             {
                 path: '/addProducts',
                 element: <AddProducts></AddProducts>
+            },
+            {
+                path: '/news',
+                element: <News></News>
             },
         ]
 

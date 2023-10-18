@@ -10,7 +10,7 @@ const Home = () => {
             <div>
                 <h2 className="text-5xl font-semibold  text-center py-5 ">~ Brands ~</h2>
             </div>
-            <div className="mx-10 grid grid-cols-1 md:grid-cols-2 gap-4 justify-items-center py-10">
+            <div className="mx-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 justify-items-center py-10">
                 {/* brand-1 */}
                 <div className="card bg-green-800 shadow-xl w-full">
                     <figure className="px-10 pt-10">
