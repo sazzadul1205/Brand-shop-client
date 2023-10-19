@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link, useLoaderData } from "react-router-dom";
 import Swal from "sweetalert2";
 
+
 const ProductDetails = () => {
     const loaderData = useLoaderData()
     const [data, setData] = useState(loaderData)
@@ -45,7 +46,6 @@ const ProductDetails = () => {
         })
     }
 
-
     return (
         <div>
             <div className="hero bg-green-500">
@@ -72,7 +72,9 @@ const ProductDetails = () => {
                                 <button className="w-1/2 bg-yellow-500 hover:bg-yellow-300 text-black font-bold py-2 px-4 rounded">Update Product</button>
                             </Link>
                             <button onClick={() => handleDelete(brand, _id)} className="w-1/2 bg-red-500 hover:bg-red-300 text-black font-bold py-2 px-4 rounded">Delete Product</button>
-
+                            <Link to={`/update/${brand}/${_id}`}>
+                                <button className="w-1/2 bg-yellow-500 hover:bg-yellow-300 text-black font-bold py-2 px-4 rounded">Add Products</button>
+                            </Link>
                         </div>
                     </div>
                 </div>
