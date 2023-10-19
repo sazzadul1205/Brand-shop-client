@@ -15,6 +15,7 @@ import NokiaPages from "../pages/productsPage/NokiaPage/NokiaPages";
 import IntelPages from "../pages/productsPage/IntelPage/IntelPages";
 import ProductDetails from "../pages/productsPage/ProductDetails/ProductDetails";
 import ProductUpdate from "../pages/productsPage/productUpdate/ProductUpdate";
+import Cart from "../pages/Cart/Cart";
 
 
 
@@ -43,6 +44,11 @@ const routes = createBrowserRouter([
             {
                 path: '/news',
                 element: <PrivateRoutes><News></News></PrivateRoutes>
+            },
+            {
+                path: '/cart',
+                element: <PrivateRoutes><Cart></Cart></PrivateRoutes>,
+                loader: () => fetch('http://localhost:5000/user')
             },
 
             // product pages

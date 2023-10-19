@@ -53,6 +53,29 @@ const SignInPage = () => {
             .then(result => {
                 console.log(result.user)
                 navigate(location?.state ? location.state : "/")
+                const createdAt = result.user?.metadata?.creationTime;
+                const newUser = { email, createdAt: createdAt, password };
+                fetch("http://localhost:5000/user", {
+                    method: "POST",
+                    headers: {
+                        "content-type": "application/json",
+                    },
+                    body: JSON.stringify(newUser),
+                })
+                    .then((res) => res.json())
+                    .then((data) => {
+                        console.log(data);
+                        const insertedId = data.insertedId;
+                        if (data.insertedId) {
+                            Swal.fire({
+                                title: "Success!",
+                                text: "New User has been Created",
+                                icon: "success",
+                                confirmButtonText: "Cool",
+                            });
+                            console.log("Inserted ID:", insertedId);
+                        }
+                    });
             })
             .catch(error => {
                 console.error(error)

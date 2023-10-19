@@ -23,6 +23,29 @@ const LoginPage = () => {
             .then(result => {
                 console.log(result.user)
                 navigate(location?.state ? location.state : '/')
+                const user = {
+                    email: email,
+                    lastLoggedAt: result.user?.metadata?.lastSignInTime,
+                };
+                fetch("http://localhost:5000/user", {
+                    method: "PATCH",
+                    headers: {
+                        "content-type": "application/json",
+                    },
+                    body: JSON.stringify(user),
+                })
+                    .then((res) => res.json())
+                    .then((data) => {
+                        console.log(data);
+                        if (data.modifiedCount > 0) {
+                            Swal.fire({
+                                title: "Success!",
+                                text: "User has been Modified",
+                                icon: "success",
+                                confirmButtonText: "Cool",
+                            });
+                        }
+                    });
             })
             .catch(error => {
                 console.error(error);
@@ -41,6 +64,26 @@ const LoginPage = () => {
             .then(result => {
                 console.log(result.user);
                 navigate(location?.state ? location.state : '/');
+                const newUser = { email, password };
+                fetch("http://localhost:5000/user", {
+                    method: "POST",
+                    headers: {
+                        "content-type": "application/json",
+                    },
+                    body: JSON.stringify(newUser),
+                })
+                    .then((res) => res.json())
+                    .then((data) => {
+                        console.log(data);
+                        if (data.insertedId) {
+                            Swal.fire({
+                                title: "Success!",
+                                text: "New User has been Created",
+                                icon: "success",
+                                confirmButtonText: "Cool",
+                            });
+                        }
+                    });
             })
             .catch(error => {
                 console.error(error);
@@ -53,6 +96,7 @@ const LoginPage = () => {
 
             });
     }
+
 
     return (
         <section className="bg-green-500 ">
@@ -92,9 +136,9 @@ const LoginPage = () => {
                                     required
                                 />
                             </div>
-                            <button 
-                            type="submit"
-                            className="w-full bg-green-500 hover:bg-green-300 text-white font-bold py-2 px-4 rounded">
+                            <button
+                                type="submit"
+                                className="w-full bg-green-500 hover:bg-green-300 text-white font-bold py-2 px-4 rounded">
                                 LogIn
                             </button>
                             {loginError && (
