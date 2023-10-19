@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useLoaderData } from "react-router-dom";
-import ProductCard from "../../ProductCard/ProductCard";
+import ProductCard from "../ProductCard/ProductCard";
 
 const banner1 = 'https://i.ibb.co/nP7vh05/nokia-banner-2.jpg';
 const banner2 = 'https://i.ibb.co/6y33gVb/nokia-banner-3.jpg';
