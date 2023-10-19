@@ -41,7 +41,7 @@ const routes = createBrowserRouter([
             {
                 path: '/samsung',
                 element: <PrivateRoutes><SamsungPage></SamsungPage></PrivateRoutes>,
-                loader: () => fetch('http://localhost:5000/product')
+                loader: () => fetch('http://localhost:5000/product/samsung')
             },
             {
                 path: '*',

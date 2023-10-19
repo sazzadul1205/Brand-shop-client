@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import AboutUs from "./AboutUs/AboutUs";
 import HelpCenter from "./HelpCenter/HelpCenter";
 
@@ -89,20 +90,22 @@ const Home = () => {
                     </div>
                 </div>
                 {/* brand-6 */}
-                <div className="card bg-green-800 hover:bg-green-700 shadow-xl w-full">
-                    <figure className="px-10 pt-10">
-                        <img
-                            src="https://i.ibb.co/vqm0J76/samsung.png"
-                            alt="Shoes"
-                            className="rounded-xl"
-                        />
-                    </figure>
-                    <div className="card-body items-center text-center">
-                        <h2 className="card-title text-5xl font-bold">Samsung Products</h2>
+                <Link className="card bg-green-800 hover:bg-green-700 shadow-xl w-full" to={'/samsung'}>
+                    <div>
+                        <figure className="px-10 pt-10">
+                            <img
+                                src="https://i.ibb.co/vqm0J76/samsung.png"
+                                alt="Shoes"
+                                className="rounded-xl"
+                            />
+                        </figure>
+                        <div className="card-body items-center text-center">
+                            <h2 className="card-title text-5xl font-bold">Samsung Products</h2>
 
-                        <div className="card-actions"></div>
+                            <div className="card-actions"></div>
+                        </div>
                     </div>
-                </div>
+                </Link>
             </div>
             <div>
                 <HelpCenter></HelpCenter>
