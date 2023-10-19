@@ -7,8 +7,12 @@ const banner2 = 'https://i.ibb.co/gDJqHgV/apple-banner-2.jpg';
 const banner3 = 'https://i.ibb.co/Cb2Js5h/apple-banner-3.jpg';
 
 const ApplePage = () => {
-    const loadedProduct = useLoaderData()
+    const loadedProduct = useLoaderData();
     const [products, setProducts] = useState(loadedProduct);
+
+    // Filter products for Apple brand
+    const appleProducts = products.filter(product => product.brand === 'Apple');
+
     return (
         <div>
             <img className="mx-auto my-5" src={'https://i.ibb.co/dQwr2p2/apple.png'} alt="https://i.ibb.co/dQwr2p2/apple.png" />
@@ -40,11 +44,11 @@ const ApplePage = () => {
             </div>
             <div>
                 <h3 className="my-5 text-5xl font-semibold text-center">Products</h3>
-                {products.length === 0 ? (
-                    <p className="text-center text-blue-800 font-black text-5xl my-5">~ No products available ~</p>
+                {appleProducts.length === 0 ? (
+                    <p className="text-center text-blue-800 font-black text-5xl my-5">~ No Apple products available ~</p>
                 ) : (
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 mx-2 md:mx-10 mb-10">
-                        {products.map(product => (
+                        {appleProducts.map(product => (
                             <ProductCard
                                 key={product._id}
                                 product={product}

@@ -7,8 +7,12 @@ const banner2 = 'https://i.ibb.co/PtCLmWH/asus-banner-2.jpg';
 const banner3 = 'https://i.ibb.co/q9716BX/asus-banner-3.jpg';
 
 const AsusPages = () => {
-    const loadedProduct = useLoaderData()
+    const loadedProduct = useLoaderData();
     const [products, setProducts] = useState(loadedProduct);
+
+    // Filter products for Asus brand
+    const asusProducts = products.filter(product => product.brand === 'Asus');
+
     return (
         <div>
             <img className="mx-auto my-5" src={'https://i.ibb.co/mtz4ZPy/asus.png'} alt="https://i.ibb.co/mtz4ZPy/asus.png" />
@@ -40,15 +44,15 @@ const AsusPages = () => {
             </div>
             <div>
                 <h3 className="my-5 text-5xl font-semibold text-center">Products</h3>
-                {products.length === 0 ? (
-                    <p className="text-center text-blue-800 font-black text-5xl my-5">~ No products available ~</p>
+                {asusProducts.length === 0 ? (
+                    <p className="text-center text-blue-800 font-black text-5xl my-5">~ No Asus products available ~</p>
                 ) : (
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 mx-2 md:mx-10 mb-10">
-                        {products.map(product => (
+                        {asusProducts.map(product => (
                             <ProductCard
                                 key={product._id}
                                 product={product}
-                                products={products}
+                                products={asusProducts}
                                 setProduct={setProducts}
                             />
                         ))}

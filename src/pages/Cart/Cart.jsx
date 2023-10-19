@@ -1,17 +1,26 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { useLoaderData } from "react-router-dom";
+import { AuthContext } from "../../Provider/AuthProvider";
 
 const Cart = () => {
-    const loadedProduct = useLoaderData()
-    const [products, setProduct] = useState(loadedProduct);
-    const {_id, email} = products;
+    const loadedProduct = useLoaderData();
+    const [products, setProducts] = useState(loadedProduct);
+    const { user } = useContext(AuthContext);
+
+    // Find products associated with the logged-in user's email
+    const userProducts = products.filter((product) => product.email === user.email);
+    console.log(user.email);
+
     return (
         <div>
-            <h1>Cart Items:{email}</h1>
-
+            <h1>Cart Items:</h1>
             <div>
-                
-                
+                {userProducts.map((product, index) => (
+                    <div key={index}>
+                        <p>{product.updatedProduct}</p>
+                        {/* Render other product information here */}
+                    </div>
+                ))}
             </div>
         </div>
     );

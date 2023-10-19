@@ -1,12 +1,12 @@
 import { BiDollar } from "react-icons/bi";
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
-const ProductCard = ({ product }) => {
+const ProductCard = ({ product, products, setProducts }) => {
 
     const { _id, name, brand, type, price, rating, supply, description, photo, ram, rom, battery, display } = product;
 
-    const handleDelete = (brand, _id) => {
-        console.log(brand, _id);
+    const handleDelete = (_id) => {
+        console.log(_id);
         Swal.fire({
             title: 'Are you sure?',
             text: "You won't be able to revert this!",
@@ -23,7 +23,7 @@ const ProductCard = ({ product }) => {
                     'success'
                 )
 
-                fetch(`http://localhost:5000/product/${brand}/${_id}`, {
+                fetch(`http://localhost:5000/product/${_id}`, {
                     method: 'DELETE',
                 })
                     .then(res => res.json())
@@ -35,6 +35,8 @@ const ProductCard = ({ product }) => {
                                 'Your Product has been deleted.',
                                 'success'
                             )
+                            const remaining = products.filter(cof => cof._id !== _id );
+                            setProducts(remaining);
                         }
                     })
             }
@@ -60,7 +62,7 @@ const ProductCard = ({ product }) => {
                         <Link to={`/update/${brand}/${_id}`}>
                             <button className="w-1/2 bg-yellow-500 hover:bg-yellow-300 text-black font-bold py-2 px-4 rounded">Update Product</button>
                         </Link>
-                        <button onClick={() => handleDelete(brand, _id)} className="w-1/2 bg-red-500 hover:bg-red-300 text-black font-bold py-2 px-4 rounded">Delete Product</button>
+                        <button onClick={() => handleDelete(_id)} className="w-1/2 bg-red-500 hover:bg-red-300 text-black font-bold py-2 px-4 rounded">Delete Product</button>
                     </div>
                 </div>
 
