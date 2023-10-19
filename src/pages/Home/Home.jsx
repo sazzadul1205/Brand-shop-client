@@ -15,80 +15,90 @@ const Home = () => {
             </div>
             <div className="mx-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 justify-items-center py-10">
                 {/* brand-1 */}
-                <div className="card bg-green-800 hover:bg-green-700 shadow-xl w-full">
-                    <figure className="px-10 pt-10">
-                        <img
-                            src="https://i.ibb.co/dQwr2p2/apple.png"
-                            alt="Shoes"
-                            className="rounded-xl "
-                        />
-                    </figure>
-                    <div className="card-body items-center text-center">
-                        <h2 className="card-title text-5xl font-bold">Apple Products</h2>
+                <Link  className="card bg-green-800 hover:bg-green-700 shadow-xl w-full" to={'/apple'}>
+                    <div>
+                        <figure className="px-10 pt-10">
+                            <img
+                                src="https://i.ibb.co/dQwr2p2/apple.png"
+                                alt="Shoes"
+                                className="rounded-xl "
+                            />
+                        </figure>
+                        <div className="card-body items-center text-center">
+                            <h2 className="card-title text-5xl font-bold">Apple Products</h2>
 
-                        <div className="card-actions"></div>
+                            <div className="card-actions"></div>
+                        </div>
                     </div>
-                </div>
+                </Link>
                 {/* brand-2 */}
-                <div className="card bg-green-800 hover:bg-green-700 shadow-xl w-full">
-                    <figure className="px-10 pt-10">
-                        <img
-                            src="https://i.ibb.co/mtz4ZPy/asus.png"
-                            alt="Shoes"
-                            className="rounded-xl"
-                        />
-                    </figure>
-                    <div className="card-body items-center text-center">
-                        <h2 className="card-title text-5xl font-bold">Asus Products</h2>
+                <Link className="card bg-green-800 hover:bg-green-700 shadow-xl w-full" to={'/asus'}>
+                    <div >
+                        <figure className="px-10 pt-10">
+                            <img
+                                src="https://i.ibb.co/mtz4ZPy/asus.png"
+                                alt="Shoes"
+                                className="rounded-xl"
+                            />
+                        </figure>
+                        <div className="card-body items-center text-center">
+                            <h2 className="card-title text-5xl font-bold">Asus Products</h2>
 
-                        <div className="card-actions"></div>
+                            <div className="card-actions"></div>
+                        </div>
                     </div>
-                </div>
+                </Link>
                 {/* brand-3 */}
-                <div className="card bg-green-800 hover:bg-green-700 shadow-xl w-full">
-                    <figure className="px-10 pt-10">
-                        <img
-                            src="https://i.ibb.co/pjxH8Hp/intel.png"
-                            alt="Shoes"
-                            className="rounded-xl"
-                        />
-                    </figure>
-                    <div className="card-body items-center text-center">
-                        <h2 className="card-title text-5xl font-bold">Intel Products</h2>
+                <Link className="card bg-green-800 hover:bg-green-700 shadow-xl w-full" to={'/intel'}>
+                    <div >
+                        <figure className="px-10 pt-10">
+                            <img
+                                src="https://i.ibb.co/pjxH8Hp/intel.png"
+                                alt="Shoes"
+                                className="rounded-xl"
+                            />
+                        </figure>
+                        <div className="card-body items-center text-center">
+                            <h2 className="card-title text-5xl font-bold">Intel Products</h2>
 
-                        <div className="card-actions"></div>
+                            <div className="card-actions"></div>
+                        </div>
                     </div>
-                </div>
+                </Link>
                 {/* brand-4 */}
-                <div className="card bg-green-800 hover:bg-green-700 shadow-xl w-full">
-                    <figure className="px-10 pt-10">
-                        <img
-                            src="https://i.ibb.co/mFBRHNZ/nokia.png"
-                            alt="Shoes"
-                            className="rounded-xl"
-                        />
-                    </figure>
-                    <div className="card-body items-center text-center">
-                        <h2 className="card-title text-5xl font-bold">Nokia Products</h2>
+                <Link className="card bg-green-800 hover:bg-green-700 shadow-xl w-full" to={'/nokia'}>
+                    <div >
+                        <figure className="px-10 pt-10">
+                            <img
+                                src="https://i.ibb.co/mFBRHNZ/nokia.png"
+                                alt="Shoes"
+                                className="rounded-xl"
+                            />
+                        </figure>
+                        <div className="card-body items-center text-center">
+                            <h2 className="card-title text-5xl font-bold">Nokia Products</h2>
 
-                        <div className="card-actions"></div>
+                            <div className="card-actions"></div>
+                        </div>
                     </div>
-                </div>
+                </Link>
                 {/* brand-5 */}
-                <div className="card bg-green-800 hover:bg-green-700 shadow-xl w-full">
-                    <figure className="px-10 pt-10">
-                        <img
-                            src="https://i.ibb.co/K29d9Zb/oppo.png"
-                            alt="Shoes"
-                            className="rounded-xl"
-                        />
-                    </figure>
-                    <div className="card-body items-center text-center">
-                        <h2 className="card-title text-5xl font-bold">Oppo Products</h2>
+                <Link className="card bg-green-800 hover:bg-green-700 shadow-xl w-full" to={'/oppo'}>
+                    <div >
+                        <figure className="px-10 pt-10">
+                            <img
+                                src="https://i.ibb.co/K29d9Zb/oppo.png"
+                                alt="Shoes"
+                                className="rounded-xl"
+                            />
+                        </figure>
+                        <div className="card-body items-center text-center">
+                            <h2 className="card-title text-5xl font-bold">Oppo Products</h2>
 
-                        <div className="card-actions"></div>
+                            <div className="card-actions"></div>
+                        </div>
                     </div>
-                </div>
+                </Link>
                 {/* brand-6 */}
                 <Link className="card bg-green-800 hover:bg-green-700 shadow-xl w-full" to={'/samsung'}>
                     <div>

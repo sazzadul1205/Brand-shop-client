@@ -2,16 +2,16 @@ import { useState } from "react";
 import { useLoaderData } from "react-router-dom";
 import ProductCard from "../../ProductCard/ProductCard";
 
-const banner1 = 'https://i.ibb.co/fG4Z9R3/intel-banner-2.jpg';
-const banner2 = 'https://i.ibb.co/P9xxqpV/intel-banner-3.jpg';
-const banner3 = 'https://i.ibb.co/h8S1wcp/intel-banner-1.jpg';
+const banner1 = 'https://i.ibb.co/zXXSSMq/banner-1.jpg';
+const banner2 = 'https://i.ibb.co/yqx0wWV/banner-2.jpg';
+const banner3 = 'https://i.ibb.co/98KRs4Q/banner-3.jpg';
 
-const IntelPages = () => {
+const SamsungPage = () => {
     const loadedProduct = useLoaderData()
     const [products, setProducts] = useState(loadedProduct);
     return (
         <div>
-            <img className="mx-auto my-5" src={'https://i.ibb.co/pjxH8Hp/intel.png'} alt="https://i.ibb.co/pjxH8Hp/intel.png" />
+            <img className="mx-auto my-5" src={'https://i.ibb.co/vqm0J76/samsung.png'} alt="https://i.ibb.co/vqm0J76/samsung.png" />
             {/* slider */}
             <div>
                 <div className="carousel lg:w-11/12 md:mx-20">
@@ -59,4 +59,4 @@ const IntelPages = () => {
     );
 };
 
-export default IntelPages;
+export default SamsungPage;
