@@ -13,7 +13,8 @@ import AsusPages from "../pages/productsPage/AusuPage/AsusPages";
 import OppoPages from "../pages/productsPage/OppoPage/OppoPages";
 import NokiaPages from "../pages/productsPage/NokiaPage/NokiaPages";
 import IntelPages from "../pages/productsPage/IntelPage/IntelPages";
-import ProductDetails from "../pages/ProductDetails/ProductDetails";
+import ProductDetails from "../pages/productsPage/ProductDetails/ProductDetails";
+import ProductUpdate from "../pages/productsPage/productUpdate/ProductUpdate";
 
 
 
@@ -43,6 +44,7 @@ const routes = createBrowserRouter([
                 path: '/news',
                 element: <PrivateRoutes><News></News></PrivateRoutes>
             },
+
             // product pages
             {
                 path: '/samsung',
@@ -52,7 +54,12 @@ const routes = createBrowserRouter([
             {
                 path: '/samsung/:id',
                 element: <PrivateRoutes><ProductDetails></ProductDetails></PrivateRoutes>,
-                loader: ({params}) => fetch(`http://localhost:5000/product/samsung/${params.id}`)
+                loader: ({ params }) => fetch(`http://localhost:5000/product/samsung/${params.id}`)
+            },
+            {
+                path: '/update/samsung/:id',
+                element: <PrivateRoutes><ProductUpdate></ProductUpdate></PrivateRoutes>,
+                loader: ({ params }) => fetch(`http://localhost:5000/product/samsung/${params.id}`)
             },
             {
                 path: '/apple',
@@ -62,7 +69,12 @@ const routes = createBrowserRouter([
             {
                 path: '/apple/:id',
                 element: <PrivateRoutes><ProductDetails></ProductDetails></PrivateRoutes>,
-                loader: ({params}) => fetch(`http://localhost:5000/product/apple/${params.id}`)
+                loader: ({ params }) => fetch(`http://localhost:5000/product/apple/${params.id}`)
+            },
+            {
+                path: '/update/apple/:id',
+                element: <PrivateRoutes><ProductUpdate></ProductUpdate></PrivateRoutes>,
+                loader: ({ params }) => fetch(`http://localhost:5000/product/samsung/${params.id}`)
             },
             {
                 path: '/asus',
@@ -72,7 +84,12 @@ const routes = createBrowserRouter([
             {
                 path: 'asus/:id',
                 element: <PrivateRoutes><ProductDetails></ProductDetails></PrivateRoutes>,
-                loader: ({params}) => fetch(`http://localhost:5000/product/asus/${params.id}`)
+                loader: ({ params }) => fetch(`http://localhost:5000/product/asus/${params.id}`)
+            },
+            {
+                path: '/update/asus/:id',
+                element: <PrivateRoutes><ProductUpdate></ProductUpdate></PrivateRoutes>,
+                loader: ({ params }) => fetch(`http://localhost:5000/product/samsung/${params.id}`)
             },
             {
                 path: '/oppo',
@@ -82,7 +99,12 @@ const routes = createBrowserRouter([
             {
                 path: '/oppo/:id',
                 element: <PrivateRoutes><ProductDetails></ProductDetails></PrivateRoutes>,
-                loader: ({params}) => fetch(`http://localhost:5000/product/oppo/${params.id}`)
+                loader: ({ params }) => fetch(`http://localhost:5000/product/oppo/${params.id}`)
+            },
+            {
+                path: '/update/oppo/:id',
+                element: <PrivateRoutes><ProductUpdate></ProductUpdate></PrivateRoutes>,
+                loader: ({ params }) => fetch(`http://localhost:5000/product/samsung/${params.id}`)
             },
             {
                 path: '/nokia',
@@ -92,7 +114,12 @@ const routes = createBrowserRouter([
             {
                 path: '/nokia/:id',
                 element: <PrivateRoutes><ProductDetails></ProductDetails></PrivateRoutes>,
-                loader: ({params}) => fetch(`http://localhost:5000/product/nokia/${params.id}`)
+                loader: ({ params }) => fetch(`http://localhost:5000/product/nokia/${params.id}`)
+            },
+            {
+                path: '/update/nokia/:id',
+                element: <PrivateRoutes><ProductUpdate></ProductUpdate></PrivateRoutes>,
+                loader: ({ params }) => fetch(`http://localhost:5000/product/samsung/${params.id}`)
             },
             {
                 path: '/intel',
@@ -102,16 +129,21 @@ const routes = createBrowserRouter([
             {
                 path: '/intel/:id',
                 element: <PrivateRoutes><ProductDetails></ProductDetails></PrivateRoutes>,
-                loader: ({params}) => fetch(`http://localhost:5000/product/intel/${params.id}`)
+                loader: ({ params }) => fetch(`http://localhost:5000/product/intel/${params.id}`)
+            },
+            {
+                path: '/update/intel/:id',
+                element: <PrivateRoutes><ProductUpdate></ProductUpdate></PrivateRoutes>,
+                loader: ({ params }) => fetch(`http://localhost:5000/product/samsung/${params.id}`)
             },
             {
                 path: '*',
                 element: <PageNotFound></PageNotFound>
             },
-            
+
         ]
 
     }
-]) 
+])
 
 export default routes

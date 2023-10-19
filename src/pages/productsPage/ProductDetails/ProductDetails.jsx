@@ -1,11 +1,11 @@
 import { useState } from "react";
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 
 const ProductDetails = () => {
     const loaderData = useLoaderData()
     const [data, setData] = useState(loaderData)
 
-    const { __id, name, brand, type, price, rating, supply, description, photo, ram, rom, battery, display  } = data;
+    const { _id, name, brand, type, price, rating, description, photo, ram, rom, battery, display } = data;
 
 
     return (
@@ -27,8 +27,14 @@ const ProductDetails = () => {
                             <p className="p-2 bg-green-700 rounded-2xl">Rating: {rating}</p>
                             <p className="p-2 bg-green-700 rounded-2xl">display: {display}</p>
                         </div>
-                        <h2>Price: $ {price}</h2>
-                        <button className="btn btn-primary w-full bg-green-800 hover:bg-green-900">Add To Cart</button>
+                        <h2 className="text-3xl my-5">Price: $ {price}</h2>
+                        <button className="btn btn-primary w-full bg-green-800 hover:bg-green-900 mb-10">Add To Cart</button>
+                        <div>
+                        <Link to={`/update/${brand}/${_id}`}>
+                            <button className="w-1/2 bg-yellow-500 hover:bg-yellow-300 text-black font-bold py-2 px-4 rounded">Add Products</button>
+                        </Link>
+                        
+                        </div>
                     </div>
                 </div>
             </div>
