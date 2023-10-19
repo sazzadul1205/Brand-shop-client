@@ -1,48 +1,64 @@
 // import Swal from "sweetalert2";
 
+import Swal from "sweetalert2";
+
 const AddProducts = () => {
-    const handleAddCoffee = e => {
+    const handleAddCoffee = (e) => {
         e.preventDefault();
 
         const form = e.target;
 
-        const name = form.name.value
-        const brand_name = form.brand_name.value
-        const type = form.type.value
-        const price = form.price.value
-        const rating = form.rating.value
-        const supply = form.supply.value
-        const description = form.description.value
-        const photo = form.photo.value
-        const ram = form.ram.value
-        const rom = form.rom.value
-        const battery = form.battery.value
-        const display = form.display.value
+        const name = form.name.value;
+        const brand = form.brand.value;
+        const type = form.type.value;
+        const price = form.price.value;
+        const rating = form.rating.value;
+        const supply = form.supply.value;
+        const description = form.description.value;
+        const photo = form.photo.value;
+        const ram = form.ram.value;
+        const rom = form.rom.value;
+        const battery = form.battery.value;
+        const display = form.display.value;
 
-        const newCoffee = { name, brand_name, type, price, rating, supply, description, ram, rom, battery, display, photo };
-        console.log(newCoffee);
+        const newProduct = {
+            name,
+            brand,
+            type,
+            price,
+            rating,
+            supply,
+            description,
+            ram,
+            rom,
+            battery,
+            display,
+            photo,
+        };
+        console.log(newProduct);
 
         // send data to Server
-        // fetch('https://coffee-store-server-with-auth-qqla1tz93.vercel.app/coffee', {
-        //     method: 'POST',
-        //     headers: {
-        //         'content-type': 'application/json'
-        //     },
-        //     body: JSON.stringify(newCoffee)
-        // })
-        //     .then(res => res.json())
-        //     .then(data => {
-        //         console.log(data);
-        //         if (data.insertedId) {
-        //             Swal.fire({
-        //                 title: 'Success!',
-        //                 text: 'Product haze been added',
-        //                 icon: 'success',
-        //                 confirmButtonText: 'Cool'
-        //             })
-        //         }
-        //     })
-    }
+        fetch('http://localhost:5000/product', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(newProduct)
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                if (data.insertedId) {
+                    Swal.fire({
+                        title: 'Success!',
+                        text: 'Product haze been added',
+                        icon: 'success',
+                        confirmButtonText: 'Cool'
+                    })
+                }
+            })
+        
+    };
 
     return (
         <div className="bg-green-500 p-10 md:p-24">
@@ -64,7 +80,7 @@ const AddProducts = () => {
                                 <span >Brand Name</span>
                             </label>
                             <label className="input-group">
-                                <input type="text" name="brand_name" placeholder="Samsung" className="input input-bordered md:w-full" />
+                                <input type="text" name="brand" placeholder="Samsung" className="input input-bordered md:w-full" />
                             </label>
                         </div>
                     </div>
@@ -121,7 +137,7 @@ const AddProducts = () => {
                                 <span >ROM</span>
                             </label>
                             <label className="input-group">
-                                <input type="text" name="rome" className="input input-bordered md:w-full" />
+                                <input type="text" name="rom" className="input input-bordered md:w-full" />
                             </label>
                         </div>
                     </div>
@@ -172,7 +188,7 @@ const AddProducts = () => {
                     </div>
                     <div >
                         <div className="form-control w-full mt-5">
-                            <input className="w-full bg-green-800 hover:bg-green-300 text-white font-bold py-2 px-4 rounded" type="submit" value="Add Coffee" />
+                            <input className="w-full bg-green-800 hover:bg-green-300 text-white font-bold py-2 px-4 rounded" type="submit" value="Add Products" />
 
                         </div>
                     </div>

@@ -21,7 +21,7 @@ const News = () => {
     }, []);
 
     return (
-        <div className="flex flex-col md:flex-col-reverse lg:flex-row mx-5 lg:mx-32">
+        <div className="flex flex-col md:flex-col lg:flex-row md:mx-5 lg:mx-32">
             <div className="w-full md:ml-36 md:w-1/4 mb-8 md:mb-0 order-1 md:order-2">
                 {recentNews.map(recentItem => (
                     <RecentNews key={recentItem.id} recentNews={recentItem}></RecentNews>

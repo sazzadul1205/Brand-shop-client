@@ -18,7 +18,7 @@ const RecentNews = ({ recentNews }) => {
 
     return (
         <div>
-            <div className="w-1/4 my-4">
+            <div className="w-1/4 my-4 ml-5">
                 <div className="card w-72 md:w-96 bg-green-700 shadow-xl">
                     <figure>
                         <img className="w-full" src={image} alt={title} />

@@ -5,6 +5,9 @@ import Login from "../Auth/Login/Login"
 import SignUp from "../Auth/SignUp/SignUp";
 import AddProducts from "../pages/AddProducts/AddProducts";
 import News from "../pages/News/News";
+import PrivateRoutes from "./PrivateRoutes";
+import PageNotFound from "../PageNotFound/PageNotFound";
+import SamsungPage from "../pages/productsPage/SamsungPage/SamsungPage";
 
 
 
@@ -28,12 +31,23 @@ const routes = createBrowserRouter([
             },
             {
                 path: '/addProducts',
-                element: <AddProducts></AddProducts>
+                element: <PrivateRoutes><AddProducts></AddProducts></PrivateRoutes>
             },
             {
                 path: '/news',
-                element: <News></News>
+                element: <PrivateRoutes><News></News></PrivateRoutes>
             },
+            // product pages
+            {
+                path: '/samsung',
+                element: <PrivateRoutes><SamsungPage></SamsungPage></PrivateRoutes>,
+                loader: () => fetch('http://localhost:5000/product')
+            },
+            {
+                path: '*',
+                element: <PageNotFound></PageNotFound>
+            },
+            
         ]
 
     }
