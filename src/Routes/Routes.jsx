@@ -49,104 +49,104 @@ const routes = createBrowserRouter([
             {
                 path: '/cart',
                 element: <PrivateRoutes><Cart></Cart></PrivateRoutes>,
-                loader: () => fetch('https://brand-shop-server-8aw35uazt-sazzadul-islams-projects.vercel.app/user')
+                loader: () => fetch('https://brand-shop-server-theta.vercel.app/user')
             },
             {
                 path: '/Offers',
                 element: <PrivateRoutes><Offers></Offers></PrivateRoutes>,
-                loader: () => fetch('https://brand-shop-server-8aw35uazt-sazzadul-islams-projects.vercel.app/product')
+                loader: () => fetch('https://brand-shop-server-theta.vercel.app/product')
             },
 
             // product pages
             {
                 path: '/samsung',   
                 element: <PrivateRoutes><SamsungPage></SamsungPage></PrivateRoutes>,
-                loader: () => fetch('https://brand-shop-server-8aw35uazt-sazzadul-islams-projects.vercel.app/product')
+                loader: () => fetch('https://brand-shop-server-theta.vercel.app/product')
             },
             {
                 path: '/samsung/:id',
                 element: <PrivateRoutes><ProductDetails></ProductDetails></PrivateRoutes>,
-                loader: ({ params }) => fetch(`https://brand-shop-server-8aw35uazt-sazzadul-islams-projects.vercel.app/product/${params.id}`)
+                loader: ({ params }) => fetch(`https://brand-shop-server-theta.vercel.app/product/${params.id}`)
             },
             {
                 path: '/update/samsung/:id',
                 element: <PrivateRoutes><ProductUpdate></ProductUpdate></PrivateRoutes>,
-                loader: ({ params }) => fetch(`https://brand-shop-server-8aw35uazt-sazzadul-islams-projects.vercel.app/product/${params.id}`)
+                loader: ({ params }) => fetch(`https://brand-shop-server-theta.vercel.app/product/${params.id}`)
             },
             {
                 path: '/apple',
                 element: <PrivateRoutes><ApplePage></ApplePage></PrivateRoutes>,
-                loader: () => fetch('https://brand-shop-server-8aw35uazt-sazzadul-islams-projects.vercel.app/product')
+                loader: () => fetch('https://brand-shop-server-theta.vercel.app/product')
             },
             {
                 path: '/apple/:id',
                 element: <PrivateRoutes><ProductDetails></ProductDetails></PrivateRoutes>,
-                loader: ({ params }) => fetch(`https://brand-shop-server-8aw35uazt-sazzadul-islams-projects.vercel.app/product/${params.id}`)
+                loader: ({ params }) => fetch(`https://brand-shop-server-theta.vercel.app/product/${params.id}`)
             },
             {
                 path: '/update/apple/:id',
                 element: <PrivateRoutes><ProductUpdate></ProductUpdate></PrivateRoutes>,
-                loader: ({ params }) => fetch(`https://brand-shop-server-8aw35uazt-sazzadul-islams-projects.vercel.app/product/${params.id}`)
+                loader: ({ params }) => fetch(`https://brand-shop-server-theta.vercel.app/product/${params.id}`)
             },
             {
                 path: '/asus',
                 element: <PrivateRoutes><AsusPages></AsusPages></PrivateRoutes>,
-                loader: () => fetch('https://brand-shop-server-8aw35uazt-sazzadul-islams-projects.vercel.app/product')
+                loader: () => fetch('https://brand-shop-server-theta.vercel.app/product')
             },
             {
                 path: 'asus/:id',
                 element: <PrivateRoutes><ProductDetails></ProductDetails></PrivateRoutes>,
-                loader: ({ params }) => fetch(`https://brand-shop-server-8aw35uazt-sazzadul-islams-projects.vercel.app/product/${params.id}`)
+                loader: ({ params }) => fetch(`https://brand-shop-server-theta.vercel.app/product/${params.id}`)
             },
             {
                 path: '/update/asus/:id',
                 element: <PrivateRoutes><ProductUpdate></ProductUpdate></PrivateRoutes>,
-                loader: ({ params }) => fetch(`https://brand-shop-server-8aw35uazt-sazzadul-islams-projects.vercel.app/product/${params.id}`)
+                loader: ({ params }) => fetch(`https://brand-shop-server-theta.vercel.app/product/${params.id}`)
             },
             {
                 path: '/oppo',
                 element: <PrivateRoutes><OppoPages></OppoPages></PrivateRoutes>,
-                loader: () => fetch('https://brand-shop-server-8aw35uazt-sazzadul-islams-projects.vercel.app/product')
+                loader: () => fetch('https://brand-shop-server-theta.vercel.app/product')
             },
             {
                 path: '/oppo/:id',
                 element: <PrivateRoutes><ProductDetails></ProductDetails></PrivateRoutes>,
-                loader: ({ params }) => fetch(`https://brand-shop-server-8aw35uazt-sazzadul-islams-projects.vercel.app/product/${params.id}`)
+                loader: ({ params }) => fetch(`https://brand-shop-server-theta.vercel.app/product/${params.id}`)
             },
             {
                 path: '/update/oppo/:id',
                 element: <PrivateRoutes><ProductUpdate></ProductUpdate></PrivateRoutes>,
-                loader: ({ params }) => fetch(`https://brand-shop-server-8aw35uazt-sazzadul-islams-projects.vercel.app/product/${params.id}`)
+                loader: ({ params }) => fetch(`https://brand-shop-server-theta.vercel.app/product/${params.id}`)
             },
             {
                 path: '/nokia',
                 element: <PrivateRoutes><NokiaPages></NokiaPages></PrivateRoutes>,
-                loader: () => fetch('https://brand-shop-server-8aw35uazt-sazzadul-islams-projects.vercel.app/product')
+                loader: () => fetch('https://brand-shop-server-theta.vercel.app/product')
             },
             {
                 path: '/nokia/:id',
                 element: <PrivateRoutes><ProductDetails></ProductDetails></PrivateRoutes>,
-                loader: ({ params }) => fetch(`https://brand-shop-server-8aw35uazt-sazzadul-islams-projects.vercel.app/product/${params.id}`)
+                loader: ({ params }) => fetch(`https://brand-shop-server-theta.vercel.app/product/${params.id}`)
             },
             {
                 path: '/update/nokia/:id',
                 element: <PrivateRoutes><ProductUpdate></ProductUpdate></PrivateRoutes>,
-                loader: ({ params }) => fetch(`https://brand-shop-server-8aw35uazt-sazzadul-islams-projects.vercel.app/product/${params.id}`)
+                loader: ({ params }) => fetch(`https://brand-shop-server-theta.vercel.app/product/${params.id}`)
             },
             {
                 path: '/intel',
                 element: <PrivateRoutes><IntelPages></IntelPages></PrivateRoutes>,
-                loader: () => fetch('https://brand-shop-server-8aw35uazt-sazzadul-islams-projects.vercel.app/product')
+                loader: () => fetch('https://brand-shop-server-theta.vercel.app/product')
             },
             {
                 path: '/intel/:id',
                 element: <PrivateRoutes><ProductDetails></ProductDetails></PrivateRoutes>,
-                loader: ({ params }) => fetch(`https://brand-shop-server-8aw35uazt-sazzadul-islams-projects.vercel.app/product/${params.id}`)
+                loader: ({ params }) => fetch(`https://brand-shop-server-theta.vercel.app/product/${params.id}`)
             },
             {
                 path: '/update/intel/:id',
                 element: <PrivateRoutes><ProductUpdate></ProductUpdate></PrivateRoutes>,
-                loader: ({ params }) => fetch(`https://brand-shop-server-8aw35uazt-sazzadul-islams-projects.vercel.app/product/${params.id}`)
+                loader: ({ params }) => fetch(`https://brand-shop-server-theta.vercel.app/product/${params.id}`)
             },
             {
                 path: '*',

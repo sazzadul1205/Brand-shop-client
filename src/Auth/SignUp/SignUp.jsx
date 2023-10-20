@@ -55,7 +55,7 @@ const SignInPage = () => {
                 navigate(location?.state ? location.state : "/")
                 const createdAt = result.user?.metadata?.creationTime;
                 const newUser = { email, createdAt: createdAt, password };
-                fetch("https://brand-shop-server-8aw35uazt-sazzadul-islams-projects.vercel.app/user", {
+                fetch("https://brand-shop-server-theta.vercel.app/user", {
                     method: "POST",
                     headers: {
                         "content-type": "application/json",

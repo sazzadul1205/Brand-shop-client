@@ -48,7 +48,7 @@ const ApplePage = () => {
                     <p className="text-center text-blue-800 font-black text-5xl my-5">~ No Apple products available ~</p>
                 ) : (
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 mx-2 md:mx-10 mb-10">
-                        {appleProducts.map(product => (
+                        {appleProducts?.map(product => (
                             <ProductCard
                                 key={product._id}
                                 product={product}
