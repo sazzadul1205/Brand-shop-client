@@ -25,7 +25,7 @@ const Navbar = () => {
             <li className="text-xl"><NavLink to={'/cart'}>My Cart</NavLink></li>
             { !user && <li className="text-xl"><NavLink to={'/login'}>Login</NavLink></li> }
             <li className="text-xl"><NavLink to={'/news'}>News</NavLink></li>
-            <li className="text-xl"><NavLink to={'/tournament'}>Offers</NavLink></li>
+            <li className="text-xl"><NavLink to={'/offers'}>Offers</NavLink></li>
         </>
 
         </>

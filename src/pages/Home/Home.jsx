@@ -1,10 +1,22 @@
+import { BsMoon, BsSun } from "react-icons/bs";
 import { Link } from "react-router-dom";
+import { useState } from "react";
 import AboutUs from "./AboutUs/AboutUs";
 import HelpCenter from "./HelpCenter/HelpCenter";
 
 const Home = () => {
+    const [isDarkTheme, setIsDarkTheme] = useState(false);
+
+    const toggleTheme = () => {
+        setIsDarkTheme(!isDarkTheme);
+    };
+
     return (
-        <div className="bg-green-400">
+        <div className={isDarkTheme ? "bg-gray-800 text-white" : "bg-green-400"}>
+            <button onClick={toggleTheme} className="fixed top-5 right-2 p-5 bg-white rounded-full">
+                {isDarkTheme ? <BsSun className="text-black"></BsSun> : <BsMoon className="text-black"></BsMoon>}
+            </button>
+
             {/* banner */}
             <div className="mx-10 py-2">
                 <img className="w-full" src={'https://i.ibb.co/jgx1CrT/banner-home.png'} alt="https://i.ibb.co/jgx1CrT/banner-home.png" />
@@ -66,7 +78,7 @@ const Home = () => {
                     </div>
                 </Link>
                 {/* brand-4 */}
-                <Link className="card bg-green-800 hover:bg-green-700 shadow-xl w-full" to={'/nokia'}>
+                <Link className="card bg-green-800 hover-bg-green-700 shadow-xl w-full" to={'/nokia'}>
                     <div >
                         <figure className="px-10 pt-10">
                             <img
@@ -83,7 +95,7 @@ const Home = () => {
                     </div>
                 </Link>
                 {/* brand-5 */}
-                <Link className="card bg-green-800 hover:bg-green-700 shadow-xl w-full" to={'/oppo'}>
+                <Link className="card bg-green-800 hover-bg-green-700 shadow-xl w-full" to={'/oppo'}>
                     <div >
                         <figure className="px-10 pt-10">
                             <img
@@ -100,7 +112,7 @@ const Home = () => {
                     </div>
                 </Link>
                 {/* brand-6 */}
-                <Link className="card bg-green-800 hover:bg-green-700 shadow-xl w-full" to={'/samsung'}>
+                <Link className="card bg-green-800 hover-bg-green-700 shadow-xl w-full" to={'/samsung'}>
                     <div>
                         <figure className="px-10 pt-10">
                             <img

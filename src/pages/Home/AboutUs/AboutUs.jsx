@@ -8,11 +8,11 @@ const AboutUs = () => {
                     <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
                         Welcome to our Tech World
                     </p>
-                    <p className="mt-4 max-w-2xl text-xl  lg:mx-auto">
+                    <p className="mt-4 max-w-2xl text-xl text-white lg:mx-auto">
                         At Tech World, we are passionate about delivering the latest tech news, product reviews, and insightful articles to keep you updated with the ever-evolving world of technology.
                     </p>
                 </div>
-                <div className="mt-20">
+                <div className="mt-20 text-white">
                     <dl className="space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10">
                         <div className="flex">
                             <div className="flex-shrink-0">
@@ -26,7 +26,7 @@ const AboutUs = () => {
                                 <dt className="text-lg leading-6 font-medium ">
                                     Our Mission
                                 </dt>
-                                <dd className="mt-2 text-base ">
+                                <dd className="mt-2 ">
                                     To provide our readers with the most comprehensive and engaging content related to the tech world and its dynamic advancements.
                                 </dd>
                             </div>

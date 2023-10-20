@@ -16,6 +16,7 @@ import IntelPages from "../pages/productsPage/IntelPage/IntelPages";
 import ProductDetails from "../pages/productsPage/ProductDetails/ProductDetails";
 import ProductUpdate from "../pages/productsPage/productUpdate/ProductUpdate";
 import Cart from "../pages/Cart/Cart";
+import Offers from "../pages/Home/Offers/Offers";
 
 
 
@@ -49,6 +50,11 @@ const routes = createBrowserRouter([
                 path: '/cart',
                 element: <PrivateRoutes><Cart></Cart></PrivateRoutes>,
                 loader: () => fetch('http://localhost:5000/user')
+            },
+            {
+                path: '/Offers',
+                element: <PrivateRoutes><Offers></Offers></PrivateRoutes>,
+                loader: () => fetch('http://localhost:5000/product')
             },
 
             // product pages
