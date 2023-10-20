@@ -20,17 +20,3 @@ A comprehensive e-commerce platform aimed at facilitating the buying and selling
 - Utilization of SweetAlert library for interactive alerts and notifications
 - Responsive design ensuring compatibility across various devices for enhanced user experience
 
-## Getting Started
-
-1. Clone the repository.
-2. Install the necessary dependencies using `npm install`.
-3. Run the application with `npm start`.
-4. Access the application via the provided localhost URL.
-
-## Contributing
-
-We welcome contributions from the community. To contribute, please follow the guidelines outlined in CONTRIBUTING.md.
-
-## Acknowledgements
-
-We would like to express our gratitude to all the developers and open-source contributors whose libraries and tools have made this project possible. Thank you for your continued support and dedication.
