@@ -12,7 +12,7 @@ const Cart = () => {
     console.log(user.email);
 
     useEffect(() => {
-        fetch('https://brand-shop-server-8aw35uazt-sazzadul-islams-projects.vercel.app//product')
+        fetch('https://brand-shop-server-8aw35uazt-sazzadul-islams-projects.vercel.app/product')
             .then(res => res.json())
             .then(data => setAllProducts(data))
             .catch(error => console.log(error));

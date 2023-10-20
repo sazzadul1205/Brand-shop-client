@@ -27,7 +27,7 @@ const LoginPage = () => {
                     email: email,
                     lastLoggedAt: result.user?.metadata?.lastSignInTime,
                 };
-                fetch("https://brand-shop-server-8aw35uazt-sazzadul-islams-projects.vercel.app//user", {
+                fetch("https://brand-shop-server-8aw35uazt-sazzadul-islams-projects.vercel.app/user", {
                     method: "PATCH",
                     headers: {
                         "content-type": "application/json",
@@ -65,7 +65,7 @@ const LoginPage = () => {
                 console.log(result.user);
                 navigate(location?.state ? location.state : '/');
                 const newUser = { email, password };
-                fetch("https://brand-shop-server-8aw35uazt-sazzadul-islams-projects.vercel.app//user", {
+                fetch("https://brand-shop-server-8aw35uazt-sazzadul-islams-projects.vercel.app/user", {
                     method: "POST",
                     headers: {
                         "content-type": "application/json",

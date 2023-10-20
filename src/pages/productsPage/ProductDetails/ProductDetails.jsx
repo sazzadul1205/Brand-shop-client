@@ -16,7 +16,7 @@ const ProductDetails = () => {
         const AddProduct = _id;
         console.log(AddProduct);
 
-        fetch(`https://brand-shop-server-8aw35uazt-sazzadul-islams-projects.vercel.app//user/${user?.email}`, {
+        fetch(`https://brand-shop-server-8aw35uazt-sazzadul-islams-projects.vercel.app/user/${user?.email}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'
