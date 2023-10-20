@@ -23,7 +23,7 @@ const ProductCard = ({ product, products, setProducts }) => {
                     'success'
                 )
 
-                fetch(`http://localhost:5000/product/${_id}`, {
+                fetch(`https://brand-shop-server-8aw35uazt-sazzadul-islams-projects.vercel.app//product/${_id}`, {
                     method: 'DELETE',
                 })
                     .then(res => res.json())
