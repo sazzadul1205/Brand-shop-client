@@ -1,8 +1,7 @@
-# Client-live link
+# Brand Shop
+## Client-live link
 https://brand-shop-e71e7.web.app/
 
-
-=======
 # Project Title
 
 A comprehensive e-commerce platform aimed at facilitating the buying and selling of various devices. The project focuses on providing a user-friendly and interactive interface for a seamless user experience.
